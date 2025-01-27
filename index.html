@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Притулок для літніх людей під егідою Товариства Червоного Хреста України. Ми забезпечуємо турботу, підтримку та комфорт для людей похилого віку.">
+    <meta name="keywords" content="притулок для літніх людей, допомога літнім, Товариство Червоного Хреста, догляд за літніми">
+    <meta name="author" content="Товариство Червоного Хреста України">
+    <title>Притулок літніх людей | Товариство Червоного Хреста</title>
+    <link rel="icon" href="https://redcross.org.ua/wp-content/uploads/2025/01/LogoUA.png" type="image/png">
+    <style>
+        /* Основні стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background-color: #b22222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f4f4f4;
+            padding: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #b22222;
+        }
+        .container {
+            padding: 20px;
+        }
+
+        /* Слайдер */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            min-width: 100%;
+            align-items: center;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .slider-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .slider-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .slider-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .slider-indicators div {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .slider-indicators .active {
+            background-color: #b22222;
+        }
+
+        /* Форми */
+        form {
+            margin-top: 20px;
+        }
+        form input, form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #b22222;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #a11d1d;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            .slide {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://redcross.org.ua/wp-content/uploads/2025/01/LogoUA.png" alt="Логотип Товариства Червоного Хреста">
+        <h1>Притулок літніх людей</h1>
+        <p>Товариство Червоного Хреста України</p>
+    </header>
+    <nav>
+        <a href="#about">Про нас</a>
+        <a href="#services">Послуги</a>
+        <a href="#help">Допомога</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+
+    <!-- Слайдер -->
+    <div class="hero">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="https://redcross.org.ua/wp-content/uploads/2023/10/4-1-1200x800.jpg" alt="Слайд 1">
+                <img src="https://redcross.org.ua/wp-content/uploads/2022/04/52001743953_e22d800042_o-1200x800.jpg" alt="Слайд 2">
+                <img src="https://redcross.org.ua/wp-content/uploads/2023/10/3-1-1200x800.jpg" alt="Слайд 3">
+            </div>
+            <div class="slide">
+                <img src="https://redcross.org.ua/wp-content/uploads/2025/01/image2.jpg" alt="Слайд 4">
+                <img src="https://redcross.org.ua/wp-content/uploads/2025/01/image3.jpg" alt="Слайд 5">
+                <img src="https://redcross.org.ua/wp-content/uploads/2025/01/image4.jpg" alt="Слайд 6">
+            </div>
+            <div class="slide">
+                <img src="https://redcross.org.ua/wp-content/uploads/2025/01/image5.jpg" alt="Слайд 7">
+                <img src="https://redcross.org.ua/wp-content/uploads/2025/01/image6.jpg" alt="Слайд 8">
+                <img src="https://redcross.org.ua/wp-content/uploads/2025/01/image7.jpg" alt="Слайд 9">
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="slider-indicators" id="indicators"></div>
+    </div>
+
+    <!-- Інформація про притулок -->
+    <div class="container">
+        <section id="about">
+            <h2>Про нас</h2>
+            <p>Наш притулок для літніх людей – це місце, де кожен знайде тепло, турботу та підтримку. Ми є частиною Товариства Червоного Хреста, яке працює задля допомоги найуразливішим верствам населення.</p>
+            <p>Ми прагнемо забезпечити комплексний догляд, медичну підтримку та організоване дозвілля для наших мешканців, створюючи середовище, де кожен відчуває себе потрібним і захищеним.</p>
+        </section>
+        <section id="services" class="section">
+            <h2>Послуги</h2>
+            <ul>
+                <li>Цілодобовий догляд за літніми людьми.</li>
+                <li>Медична допомога та консультації.</li>
+                <li>Соціальна підтримка та психологічна допомога.</li>
+                <li>Організація дозвілля.</li>
+            </ul>
+        </section>
+        <section id="help" class="section">
+            <h2>Допомога</h2>
+            <p>Ви можете підтримати наш притулок, зробивши благодійний внесок або ставши волонтером. Кожна ваша дія допомагає зробити життя наших мешканців кращим.</p>
+        </section>
+        <section id="contacts" class="section">
+            <h2>Контакти</h2>
+            <p><strong>Адреса:</strong> вул. Центральна, 15, м. Київ</p>
+            <p><strong>Телефон:</strong> +38 (044) 123-45-67</p>
+            <p><strong>Email:</strong> info@example.com</p>
+            <form action="#">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Ваше повідомлення" rows="5" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.getElementById('slider');
+        const indicators = document.getElementById('indicators');
+
+        // Індикатори слайдера
+        slides.forEach((_, i) => {
+            const indicator = document.createElement('div');
+            indicator.addEventListener('click', () => showSlide(i));
+            indicators.appendChild(indicator);
+        });
+
+        function updateIndicators() {
+            indicators.querySelectorAll('div').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function showSlide(index) {
+            const totalSlides = slides.length;
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateIndicators();
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Автоматичне переключення слайдів
+        setInterval(() => {
+            nextSlide();
+        }, 5000); // Зміна кожні 5 секунд
+
+        // Ініціалізація
+        showSlide(0);
+    </script>
+</body>
+</html>
